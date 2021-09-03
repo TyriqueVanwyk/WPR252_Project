@@ -38,17 +38,19 @@ app.get('/weather', (req, res) => {
         })
     }
 
-    weatherData(address, (error, {temperature, description, cityName} = {}) => {
+    weatherData(address, (error, {temperature, description, cityName, humidity, windSpeed} = {}) => {
         if(error) {
             return res.send({
                 error
             })
         }
-        console.log(temperature, description, cityName);
+        console.log(temperature, description, cityName, humidity, windSpeed);
         res.send({
             temperature,
             description,
-            cityName
+            cityName,
+            humidity,
+            windSpeed
         })
     })
 });
