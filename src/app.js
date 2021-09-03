@@ -1,3 +1,8 @@
+//Group members
+//Tyrique Van Wyk
+// Refentse Gaonnwe
+
+//Github repository
 const express = require('express');
 const hbs = require("hbs");
 const path = require("path");
