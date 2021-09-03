@@ -15,6 +15,8 @@ const locationElement = document.querySelector('.place');
 
 const dateElement = document.querySelector('.date');
 
+const humidity = document.querySelector('.humidity');
+
 //Create array of months
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -51,8 +53,13 @@ weatherForm.addEventListener('submit', (event) => {
                 }
                 //Use the data to show the city name
                 locationElement.textContent = data.cityName;
+                
                 //Use the data to show the temperature
                 tempElement.textContent = (data.temperature - 273.5).toFixed(2) + String.fromCharCode(176);
+                
+                //Use the data  to show the Humidity
+                humidity.textContent = "Humidity:" + data.humidity;
+                
                 //Use the data to show description (Clear Sky, Raining) etc
                 weatherCondition.textContent = data.description.toUpperCase();
             }
