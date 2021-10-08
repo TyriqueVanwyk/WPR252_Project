@@ -1,4 +1,4 @@
-# WPR252_Project
+# Weather app
 
 To run use
 
